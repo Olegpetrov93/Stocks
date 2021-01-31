@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633A952125C6C1AF0041855D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A952025C6C1AF0041855D /* APIManager.swift */; };
+		633A952525C6CC3D0041855D /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A952425C6CC3D0041855D /* ErrorManager.swift */; };
+		633A952825C6CD8D0041855D /* APIStocksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A952725C6CD8D0041855D /* APIStocksManager.swift */; };
+		633A952F25C6D9E00041855D /* StocksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A952E25C6D9E00041855D /* StocksModel.swift */; };
 		63C0F65C25C6101900AECC1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F65B25C6101900AECC1B /* AppDelegate.swift */; };
 		63C0F65E25C6101900AECC1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F65D25C6101900AECC1B /* SceneDelegate.swift */; };
 		63C0F66025C6101900AECC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C0F65F25C6101900AECC1B /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633A952025C6C1AF0041855D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		633A952425C6CC3D0041855D /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		633A952725C6CD8D0041855D /* APIStocksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStocksManager.swift; sourceTree = "<group>"; };
+		633A952E25C6D9E00041855D /* StocksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksModel.swift; sourceTree = "<group>"; };
 		63C0F65825C6101900AECC1B /* Stocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C0F65B25C6101900AECC1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C0F65D25C6101900AECC1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633A952B25C6D9B80041855D /* APIWorking */ = {
+			isa = PBXGroup;
+			children = (
+				633A952425C6CC3D0041855D /* ErrorManager.swift */,
+				633A952025C6C1AF0041855D /* APIManager.swift */,
+				633A952725C6CD8D0041855D /* APIStocksManager.swift */,
+			);
+			path = APIWorking;
+			sourceTree = "<group>";
+		};
 		63C0F64F25C6101900AECC1B = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +77,8 @@
 				63C0F65B25C6101900AECC1B /* AppDelegate.swift */,
 				63C0F65D25C6101900AECC1B /* SceneDelegate.swift */,
 				63C0F65F25C6101900AECC1B /* ViewController.swift */,
+				633A952E25C6D9E00041855D /* StocksModel.swift */,
+				633A952B25C6D9B80041855D /* APIWorking */,
 				63C0F66125C6101900AECC1B /* Main.storyboard */,
 				63C0F66425C6101A00AECC1B /* Assets.xcassets */,
 				63C0F66625C6101A00AECC1B /* LaunchScreen.storyboard */,
@@ -137,9 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633A952125C6C1AF0041855D /* APIManager.swift in Sources */,
 				63C0F66025C6101900AECC1B /* ViewController.swift in Sources */,
 				63C0F65C25C6101900AECC1B /* AppDelegate.swift in Sources */,
+				633A952F25C6D9E00041855D /* StocksModel.swift in Sources */,
+				633A952825C6CD8D0041855D /* APIStocksManager.swift in Sources */,
 				63C0F65E25C6101900AECC1B /* SceneDelegate.swift in Sources */,
+				633A952525C6CC3D0041855D /* ErrorManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YGACN3ADP;
 				INFOPLIST_FILE = Stocks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YGACN3ADP;
 				INFOPLIST_FILE = Stocks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
