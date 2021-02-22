@@ -58,8 +58,15 @@ extension APIManager {
                 switch HTTPResponse.statusCode {
                 case 200:
                     do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject]
-                        completionHandler(json, HTTPResponse, nil)
+                        if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: AnyObject] {
+                            completionHandler(json, HTTPResponse, nil)
+                        }
+                        
+                        if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: AnyObject]] {
+                            completionHandler(["arr": json] as? [String: AnyObject], HTTPResponse, nil)
+                        }
+                        
+                        
                     } catch let error as NSError {
                         completionHandler(nil, HTTPResponse, error)
                     }
